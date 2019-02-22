@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>筑波大学花火研究会</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+  <link rel="icon" href="icon.jpg">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" media="all" />
+  <meta name="description" content="筑波大学花火研究会のHP">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="slick-1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript">
+    // ナビ固定
+    $(function () {
+      var $win = $(window),
+        $main = $('main'),
+        $nav = $('nav'),
+        navHeight = $nav.outerHeight(),
+        navPos = $nav.offset().top,
+        fixedClass = 'is-fixed';
+
+      $win.on('load scroll', function () {
+        var value = $(this).scrollTop();
+        if (value > navPos) {
+          $nav.addClass(fixedClass);
+          $main.css('padding-top', navHeight);
+        } else {
+          $nav.removeClass(fixedClass);
+          $main.css('padding-top', '0');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    // スクロールアニメーション
+    $(function () {
+      var navHeight = 75;
+      $('a[href^="#"]').click(function () {
+        var speed = 400;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top - navHeight - 109;
+        $('body,html').animate({ scrollTop: position }, speed, 'swing');
+        return false;
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    // トップへ戻るボタン
+    $(function () {
+      var pagetop = $('#page_top');
+      pagetop.hide();
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+          pagetop.fadeIn();
+        } else {
+          pagetop.fadeOut();
+        }
+      });
+      pagetop.click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 500); //0.5秒かけてトップへ移動
+        return false;
+      });
+    });
+  </script>
+  <script type="text/javascript">
+  // スライダー(花火情報)
+    $(function() {
+      $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 8000,
+        centerMode: true,
+        centerPadding: 0,
+        dots: true,
+        dotsClass: 'slide-dots',
+        arrows: true,
+        prevArrow: '<div class="slider-arrow slider-prev fas fa-caret-left fa-3x"></div>',
+        nextArrow: '<dev class="slider-arrow slider-next fas fa-caret-right fa-3x"></div>'
+      }); 
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="lang">
+      <ul>
+        <li>
+          <p>日本語</p>
+        </li>
+        <li>
+          <a href="tsukuba-hanabi-eng.html">English</a>
+        </li>
+      </ul>
+    </div>
+    <div class="title">筑波大学花火研究会</div>
+    <nav class>
+      <a href="#" class="totop">筑波大学花火研究会</a>
+      <ul>
+        <li>
+          <a href="#about">
+            団体紹介
+          </a>
+        </li>
+        <li>
+          <a href="#fireworks-info">
+            花火情報
+          </a>
+        </li>
+        <li>
+          <a href="#contact">
+            お問い合わせ
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <h1 id="about">団体紹介</h1>
+      <p>
+        花火観覧およびやどかり祭や<br>
+        雙峰祭花火企画のお手伝いを<br>
+        目的としている筑波大学公認サークルです。<br>
+        毎週金曜日に図書館でミーティングをしています。
+      </p>
+    </section>
+
+    <section class="fireworks-info">
+      <img src="img/fireworks1.png" class="fire" id="fire1">
+      <h1 id="fireworks-info">花火情報</h1>
+      <p>
+        弊会員イチオシの花火大会を紹介します。<br>
+        ぜひ、実際に足を運んでみてください。
+      </p>
+  		<ul class="slider">
+				<li>
+          <div class="slide">
+            <img src="img/katagai.jpg" alt="片貝まつり">
+            <div class="slide-overlay">
+              <a href="http://katakaimachi-enkakyokai.info/">片貝まつり</a>
+              <p>新潟の花火大会というと長岡が有名ですが、片貝も忘れてはいけません。<br>
+                 世界最大と言われる『四尺玉』は圧巻です...!</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="slide">
+            <img src="img/ebisukou.jpg" alt="長野えびす講">
+            <div class="slide-overlay">
+              <a href="http://www.nagano-cci.or.jp/ebisukou/">長野えびす講</a>
+              <p>音楽と花火が共演するミュージックスターマインは迫力満点！<br>
+                フィナーレは感動もの。<br>
+                毎年勤労感謝の日に行われるので、防寒対策はしっかりとしていきましょう。</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="slide">
+            <img src="" alt="">
+              <div class="slide-overlay">
+                <a href=""></a>
+                <p></p>
+              </div>
+          </div>
+        </li>
+      </ul>
+      <img src="img/fireworks2.png" class="fire" id="fire2">
+    </section>
+
+    <section class="contact">
+      <h1 id="contact">お問い合わせ</h1>
+      <p>何かご不明な点等ございましたら<br>
+        メールまたはTwitterにてご連絡ください。</p>
+      <table class="address_tb">
+        <tr>
+        <td class="address">
+        <a href="mailto:tsukuba.hanabi@gmail.com">
+          <p class="far fa-envelope fa-5x faa-bounce animated-hover"></p>
+        </a>
+        <p>tsukuba.hanabi <img src="img/at.png" id="atmark"> gmail.com</p>
+      </td>
+      <td class="address">
+        <a href="https://twitter.com/hanabitsukuba" target="_blank">
+          <p class="fab fa-twitter fa-5x faa-wrench animated-hover"></p>
+          <p>@HanabiTsukuba</p>
+        </a>
+      </td>
+      </tr>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 筑波大学花火研究会</p>
+  </footer>
+
+  <div id="page_top">
+    <a href="#"><img src="img/pagetop.PNG" height="50px" width="50"></a>
+  </div>
+</body>
+
+</html>
