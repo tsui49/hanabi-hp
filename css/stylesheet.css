@@ -1,0 +1,420 @@
+/* body */
+
+* {
+    margin: 0;
+}
+
+
+/* header */
+
+.lang {
+    background-color: #000;
+}
+
+.lang ul {
+    line-height: 2;
+}
+
+.lang p {
+    text-shadow: 0 1px 1em #fa0;
+}
+
+.title {
+    font-family: 'HG???', serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 1em #000;
+    font-size: 60px;
+    text-align: center;
+    padding: 300px 0px;
+    /* background-color: #000; */
+    /* opacity: 0.3; */
+}
+
+.title-eng {
+    font-family: 'Franklin Gothic Medium', Verdana;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 1em #000;
+    font-size: 60px;
+    text-align: center;
+    padding: 300px 0px;
+}
+
+header {
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    background-color: #000;
+    height: 75px;
+}
+
+nav a ,
+.lang a{
+    color: #fff;
+}
+
+.lang ul,
+nav ul {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav ul {
+    text-align: right;
+    line-height: 5;
+}
+
+.lang li,
+nav li {
+    display: inline-block;
+    padding: 0px 24px;
+    font-size: 15px;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+.totop {
+    display: none;
+    font-weight: 600;
+    float: left;
+    line-height: 5;
+    padding-left: 30px;
+}
+
+.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.is-fixed a {
+    color: #fff;
+    display: inherit;
+}
+
+
+/* main */
+
+.fire {
+    display: block;
+    margin: 160px auto;
+    height: 75px;
+    width: 75px;
+}
+
+#fire1 {
+    margin-top: 0;
+}
+
+#fire2 {
+    margin-bottom: 0;
+}
+
+.about, 
+.fireworks-info,
+.contact {
+    width: auto;
+    margin: 60px auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about p,
+.fireworks-info p,
+.contact p {
+    line-height: 2;
+    text-align: center;
+}
+
+
+/* fireworks-info */
+
+.fireworks-info {
+    color: #fff;
+    background: #000;
+}
+
+.fireworks-info ol,
+.fireworks-info ul{
+    list-style:none;
+}
+
+
+/* slider */
+
+.slider {
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+.slider li {
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+    overflow: hidden;
+}
+
+.slide {
+    width: 60vw;
+    background: #000;
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.slide img {
+    display: block;
+    width: 60vw;
+    height: auto;
+    border-radius: 5%;
+    opacity: 1;
+    -webkit-transition: opacity 0.4s, transform 0.4s;
+    transition: opacity 0.4s, transform 0.4s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.slide:hover img {
+    opacity: 0.3;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.slide-overlay {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+    border-radius: 5%;
+}
+
+.slide:hover .slide-overlay {
+    opacity: 1;
+}
+
+.slide-overlay a,
+.slide-overlay p {
+    padding-top: 100px;
+    color: #fff;
+    text-align: center;
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+    -webkit-transition: transform 0.4s, color 0.4s;
+    transition: transform 0.4s, color 0.4s;
+}
+
+.slide-overlay a {
+    font-size: 2rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.slide-overlay p {
+    font-size: 1rem;
+}
+
+.slide:hover .slide-overlay a, .slide-overlay p {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+ul.slider {
+    margin-top: 50px;
+    padding-left: 0;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slider.slick-initialized {
+    display: block;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    color: #eee;
+    opacity: 0.7;
+    line-height: 36px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.slider-prev {
+    left: -50px;
+}
+
+.slider-next {
+    right: -50px;
+}
+
+.slick-slide {
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+
+/* dots */
+
+.slide-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slide-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slide-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slide-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slide-dots li button:hover,
+.slide-dots li button:focus {
+    outline: none;
+}
+
+.slide-dots li button:hover:before,
+.slide-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slide-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: #eee;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slide-dots li.slick-active button:before {
+    opacity: .75;
+    color: cyan;
+}
+
+
+/* contact */
+
+.address_tb {
+    width: 500px;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+.address {
+    width: 50%;
+    text-align: center;
+}
+
+.fa-envelope {
+    color: orangered;
+    margin-bottom: 30px;
+}
+
+.fa-twitter {
+    color: deepskyblue;
+    margin-bottom: 30px;
+}
+
+#atmark {
+    height: 12px;
+    width: 12px;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #000;
+    height: 90px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 35px;
+    text-align: center;
+}
+
+
+/* another */
+
+.page_top{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+.page_top a{
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+#page_top {
+    width: 20vw;
+    max-width: 80px;;
+}
