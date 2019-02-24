@@ -371,7 +371,7 @@ ul.slider {
 
 footer {
     background-color: #000;
-    height: 80px;
+    height: 90px;
 }
 
 footer p {
@@ -384,14 +384,19 @@ footer p {
 
 /* another */
 
-#page_top{
+.page_top{
   position: fixed;
   right: 0;
   bottom: 0;
   opacity: 0.9;
 }
-#page_top a{
+.page_top a{
   position: relative;
   display: block;
   text-decoration: none;
+}
+
+#page_top {
+    width: 20vw;
+    max-width: 80px;;
 }
