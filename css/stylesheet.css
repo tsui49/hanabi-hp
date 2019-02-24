@@ -20,7 +20,8 @@
 }
 
 .title {
-    font-family: 'HG行書体';
+    font-family: 'HG???', serif;
+    font-weight: bold;
     color: #fff;
     text-shadow: 0 1px 1em #000;
     font-size: 60px;
@@ -32,6 +33,7 @@
 
 .title-eng {
     font-family: 'Franklin Gothic Medium', Verdana;
+    font-weight: bold;
     color: #fff;
     text-shadow: 0 1px 1em #000;
     font-size: 60px;
