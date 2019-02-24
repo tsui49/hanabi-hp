@@ -377,7 +377,7 @@ footer {
 footer p {
     color: #aaa;
     font-size: 14px;
-    line-height: 18vh;
+    padding-top: 18vh;
     text-align: center;
 }
 
