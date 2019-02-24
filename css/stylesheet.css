@@ -178,6 +178,7 @@ section h1 {
     background: #000;
     position: relative;
     border-radius: 5%;
+    overflow: hidden;
 }
 
 .slide img {
@@ -186,10 +187,16 @@ section h1 {
     height: auto;
     border-radius: 5%;
     opacity: 1;
+    -webkit-transition: opacity 0.4s, transform 0.4s;
+    transition: opacity 0.4s, transform 0.4s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
 }
 
 .slide:hover img {
     opacity: 0.3;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
 }
 
 .slide-overlay {
@@ -201,6 +208,8 @@ section h1 {
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
     border-radius: 5%;
 }
 
@@ -213,6 +222,10 @@ section h1 {
     padding-top: 100px;
     color: #fff;
     text-align: center;
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+    -webkit-transition: transform 0.4s, color 0.4s;
+    transition: transform 0.4s, color 0.4s;
 }
 
 .slide-overlay a {
@@ -224,6 +237,11 @@ section h1 {
 
 .slide-overlay p {
     font-size: 1rem;
+}
+
+.slide:hover .slide-overlay a, .slide-overlay p {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
 }
 
 ul.slider {
