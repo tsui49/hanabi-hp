@@ -371,13 +371,13 @@ ul.slider {
 
 footer {
     background-color: #000;
-    height: 40vh;
+    height: 80px;
 }
 
 footer p {
     color: #aaa;
     font-size: 14px;
-    padding-top: 18vh;
+    padding-top: 35px;
     text-align: center;
 }
 
