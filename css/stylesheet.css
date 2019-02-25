@@ -147,6 +147,13 @@ section h1 {
 }
 
 
+/* about */
+
+.about {
+    height: 300px;
+}
+
+
 /* fireworks-info */
 
 .fireworks-info {
@@ -335,14 +342,14 @@ ul.slider {
 
 .slide-dots li button:before {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 30px;
     line-height: 20px;
     position: absolute;
     top: 0;
     left: 0;
     width: 20px;
     height: 20px;
-    content: '•';
+    content: '・';
     text-align: center;
     opacity: .25;
     color: #eee;
@@ -415,6 +422,19 @@ footer p {
 }
 
 #page_top {
-    width: 20vw;
-    max-width: 80px;;
+    width: 80px;
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        height: 80vh;
+    }
+
+    .nav {
+        height: 20vh;
+    }
+
+    #page_top {
+        width: 20vw;
+    }
 }
