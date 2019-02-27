@@ -1,7 +1,16 @@
+html {
+    font-size: 16px;
+}
+
+
 /* body */
 
 * {
     margin: 0;
+}
+
+.ifsmartphone {
+    display: none;
 }
 
 
@@ -16,14 +25,14 @@
 }
 
 .lang p {
-    text-shadow: 0 1px 1em #fa0;
+    text-shadow: 0 1px 1rem #fa0;
 }
 
 .title {
     font-family: 'HG???', serif;
     font-weight: bold;
     color: #fff;
-    text-shadow: 0 1px 1em #000;
+    text-shadow: 0 1px 1rem #000;
     font-size: 60px;
     text-align: center;
     padding: 300px 0px;
@@ -35,7 +44,7 @@
     font-family: 'Franklin Gothic Medium', Verdana;
     font-weight: bold;
     color: #fff;
-    text-shadow: 0 1px 1em #000;
+    text-shadow: 0 1px 1rem #000;
     font-size: 60px;
     text-align: center;
     padding: 300px 0px;
@@ -66,7 +75,7 @@ nav ul {
 
 nav ul {
     text-align: right;
-    line-height: 5;
+    line-height: 75px;
 }
 
 .lang li,
@@ -89,7 +98,7 @@ a:hover {
     display: none;
     font-weight: 600;
     float: left;
-    line-height: 5;
+    line-height: 75px;
     padding-left: 30px;
 }
 
@@ -109,11 +118,16 @@ a:hover {
 
 /* main */
 
+.border {
+    width: 100%;
+    background: #000;
+}
+
 .fire {
     display: block;
-    margin: 160px auto;
     height: 75px;
     width: 75px;
+    margin: 0 auto;
 }
 
 #fire1 {
@@ -128,7 +142,7 @@ a:hover {
 .fireworks-info,
 .contact {
     width: auto;
-    margin: 60px auto;
+    margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -136,7 +150,8 @@ a:hover {
 section h1 {
     font-size: 40px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
 
 .about p,
@@ -144,6 +159,13 @@ section h1 {
 .contact p {
     line-height: 2;
     text-align: center;
+}
+
+
+/* about */
+
+.about {
+    height: 500px;
 }
 
 
@@ -163,7 +185,7 @@ section h1 {
 /* slider */
 
 .slider {
-    max-width: 60vw;
+    width: 60vw;
     margin: 0 auto;
 }
 
@@ -178,6 +200,7 @@ section h1 {
     background: #000;
     position: relative;
     border-radius: 5%;
+    overflow: hidden;
 }
 
 .slide img {
@@ -186,10 +209,16 @@ section h1 {
     height: auto;
     border-radius: 5%;
     opacity: 1;
+    -webkit-transition: opacity 0.4s, transform 0.4s;
+    transition: opacity 0.4s, transform 0.4s;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
 }
 
 .slide:hover img {
     opacity: 0.3;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
 }
 
 .slide-overlay {
@@ -201,6 +230,8 @@ section h1 {
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
     border-radius: 5%;
 }
 
@@ -213,6 +244,10 @@ section h1 {
     padding-top: 100px;
     color: #fff;
     text-align: center;
+    -webkit-transform: scale3d(0, 0, 1);
+    transform: scale3d(0, 0, 1);
+    -webkit-transition: transform 0.4s, color 0.4s;
+    transition: transform 0.4s, color 0.4s;
 }
 
 .slide-overlay a {
@@ -224,6 +259,11 @@ section h1 {
 
 .slide-overlay p {
     font-size: 1rem;
+}
+
+.slide:hover .slide-overlay a, .slide-overlay p {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
 }
 
 ul.slider {
@@ -258,8 +298,13 @@ ul.slider {
     right: -50px;
 }
 
+.left-arr,
+.right-arr {
+    font-size: 3rem;
+}
+
 .slick-slide {
-    padding: 1.5em 0;
+    padding: 1.5rem 0;
     text-align: center;
 }
 
@@ -267,7 +312,7 @@ ul.slider {
 /* dots */
 
 .slide-dotted.slick-slider {
-    margin-bottom: 30px;
+    margin-bottom: 100px;
 }
 
 .slide-dots {
@@ -317,14 +362,14 @@ ul.slider {
 
 .slide-dots li button:before {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 30px;
     line-height: 20px;
     position: absolute;
     top: 0;
     left: 0;
     width: 20px;
     height: 20px;
-    content: '•';
+    content: '・';
     text-align: center;
     opacity: .25;
     color: #eee;
@@ -341,7 +386,6 @@ ul.slider {
 /* contact */
 
 .address_tb {
-    width: 500px;
     padding-top: 50px;
     margin: 0 auto;
 }
@@ -353,12 +397,12 @@ ul.slider {
 
 .fa-envelope {
     color: orangered;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .fa-twitter {
     color: deepskyblue;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #atmark {
@@ -397,6 +441,150 @@ footer p {
 }
 
 #page_top {
-    width: 20vw;
-    max-width: 80px;;
+    width: 80px;
+}
+
+@media screen and (max-device-width: 480px) {
+
+/* header */
+
+    .title,
+    .title-eng {
+        font-size: 6rem;
+        padding: 30vh 0px;
+    }
+
+    .ifsmartphone {
+        display: initial;
+    }
+
+    nav {
+        height: 10vh;
+    }
+
+    nav ul,
+    .totop {
+        line-height: 10vh;
+    }
+
+    nav li,
+    .lang li {
+        padding: 0 40px;
+        font-size: 1.7rem;
+    }
+
+    .is-fixed a {
+        font-size: 1.7rem;
+    }
+
+
+/* main */
+
+    .fire {
+        width: 15vw;
+        height: auto;
+    }
+
+    .about {
+        height: 60vh;
+    }
+
+    .about > h1,
+    .fireworks-info > h1,
+    .contact > h1 {
+        font-size: 5rem;
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+    }
+
+    .about > p,
+    .fireworks-info > p,
+    .contact > p {
+        font-size: 1.9rem;
+        margin-bottom: 15vh;
+    }
+
+    .fireworks-info > p,
+    .contact > p {
+        margin-bottom: 5vh;
+    }
+
+    .fireworks-info {
+        padding-bottom: 15vh;
+    }
+
+
+/* slider */
+
+    .slider,
+    .slide,
+    .slide img {
+        width: 80vw;
+    }
+
+    .slide-overlay a {
+        font-size: 2rem;
+    }
+
+    .slide-overlay p {
+        font-size: 1.2rem;
+        margin-top: 2vh;
+    }
+
+    .left-arr,
+    .right-arr {
+        font-size: 5rem;
+    }
+
+
+/* dots */
+
+    .slide-dotted.slick-slider {
+        margin-bottom: 15vh;
+    }
+
+
+/* contact */
+
+    .address_tb td {
+        display: block;
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+
+    .address p,
+    .address a {
+        font-size: 2rem;
+    }
+
+    #atmark {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .fa-envelope::before {
+        font-size: 12rem;
+    }
+    
+    .fa-twitter::before {
+        font-size: 12rem;
+    }
+
+/* footer */
+
+    footer {
+        height: 20vh;
+    }
+
+    footer p {
+        font-size: 1.7rem;
+        padding-top: 8vh;
+    }
+
+
+/* another */
+
+    #page_top {
+        width: 20vw;
+    }
 }

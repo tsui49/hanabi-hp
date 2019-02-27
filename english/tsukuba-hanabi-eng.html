@@ -38,12 +38,12 @@
   <script type="text/javascript">
     // スクロールアニメーション
     $(function () {
-      var navHeight = 75;
+      var navHeight = $('nav').outerHeight();
       $('a[href^="#"]').click(function () {
         var speed = 400;
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top - navHeight - 109;
+        var position = target.offset().top - navHeight;
         $('body,html').animate({ scrollTop: position }, speed, 'swing');
         return false;
       });
@@ -104,11 +104,6 @@
       <a href="#" class="totop">Tsukuba Fireworks Producers</a>
       <ul>
         <li>
-          <a href="http://hanabi-tsukuba.hatenablog.jp/" target="_blank">
-            blog
-          </a>
-        </li>
-        <li>
           <a href="#about">
             about
           </a>
@@ -128,19 +123,22 @@
   </header>
 
   <main>
-    <section class="about">
-      <h1 id="about">about</h1>
+    <section class="about" id="about">
+      <h1>about</h1>
       <p>
         This is an official circle of University of Tsukuba.<br>
         We plan the fireworks of the school festival<br>
         and watch fireworks all over the country.<br>
-        We usually have a meeting every Friday at Center Lib.
+        We usually have a meeting every week.
       </p>
     </section>
 
-    <section class="fireworks-info">
-      <img src="../img/fireworks1.png" class="fire" id="fire1">
-      <h1 id="fireworks-info">fireworks</h1>
+    <div class="border">
+        <img src="../img/fireworks1.png" class="fire" id="fire1">
+    </div>
+
+    <section class="fireworks-info" id="fireworks-info">
+      <h1>fireworks</h1>
       <p>
         We introduce you some of the best recomended fireworks.<br>
         You must go there and watch them with your own eyes!
@@ -152,8 +150,7 @@
             <div class="slide-overlay">
               <a href="http://katakaimachi-enkakyokai.info/" target="_blank">Univalve Festival</a>
               <p>Speaking of Fireworks in Nigata,<br>
-                 Nagaoka may be the most famous,<br>
-                 but we recommend this.<br>
+                 Nagaoka may be the most famous, but we recommend this.<br>
                  "four <spam style="font-style: oblique">syaku dama</spam> is the biggest fireworks in the world.<br>
                  It's simply overwhelming...!</p>
             </div>
@@ -164,45 +161,49 @@
             <img src="../img/ebisukou.jpg" alt="Nagano Ebisuko Fireworks Festival">
             <div class="slide-overlay">
               <a href="http://www.nagano-cci.or.jp/ebisukou/english.html" target="_blank">Nagano Ebisuko Fireworks Festival</a>
-              <p>"Music star mine", which is the fusion of music and fireworks<br>
-                 will give you full impact.<br>
-                 Don't forget weatherization<br>
-                 because this is held on November 23 every year.</p>
+              <p>"Music star mine", which is the fusion of music and fireworks, will give you full impact.<br>
+                 Don't forget weatherization because this is held on November 23 every year.</p>
             </div>
           </div>
         </li>
         <li>
           <div class="slide">
-            <img src="" alt="">
+            <img src="../img/joso.jpg" alt="Joso Kinugawa Fireworks Festival">
               <div class="slide-overlay">
-                <a href=""></a>
-                <p></p>
+                <a href="https://joso-hanabi.jp/" target="_blank">Joso Kinugawa Fireworks Festival</a>
+                <p>Ibaraki is known as the worst fascinating prefecture, but it's not true in terms of fireworks.<br>
+                   You will watch fireworks which are made by some of the best manufacturers<br>
+                   and have extremely high artistic quality</p>
               </div>
           </div>
         </li>
       </ul>
-      <img src="../img/fireworks2.png" class="fire" id="fire2">
     </section>
 
-    <section class="contact">
-      <h1 id="contact">contact</h1>
+    <div class="border">
+        <img src="../img/fireworks2.png" class="fire" id="fire2">
+    </div>
+
+    <section class="contact" id="contact">
+      <h1>contact</h1>
       <p>If you want to know more about us,<br>
-         please email or DM in twitter.</p>
+         please email or DM in twitter.
+      </p>
       <table class="address_tb">
         <tr>
-        <td class="address">
-        <a href="mailto:tsukuba.hanabi@gmail.com">
-          <p class="far fa-envelope fa-5x faa-bounce animated-hover"></p>
-        </a>
-        <p>tsukuba.hanabi <img src="../img/at.png" id="atmark"> gmail.com</p>
-      </td>
-      <td class="address">
-        <a href="https://twitter.com/hanabitsukuba" target="_blank">
-          <p class="fab fa-twitter fa-5x faa-wrench animated-hover"></p>
-          <p>@HanabiTsukuba</p>
-        </a>
-      </td>
-      </tr>
+          <td class="address">
+            <a href="mailto:tsukuba.hanabi@gmail.com">
+              <p class="far fa-envelope fa-5x faa-bounce animated-hover"></p>
+            </a>
+            <p>tsukuba.hanabi <img src="../img/at.png" id="atmark"> gmail.com</p>
+          </td>
+          <td class="address">
+            <a href="https://twitter.com/hanabitsukuba" target="_blank">
+              <p class="fab fa-twitter fa-5x faa-wrench animated-hover"></p>
+              <p>@HanabiTsukuba</p>
+            </a>
+          </td>
+        </tr>
       </table>
     </section>
   </main>

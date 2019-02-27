@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" media="all" />
   <meta name="description" content="筑波大学花火研究会のHP">
+  <meta name=”viewport” content=”width=device-width,initial-scale=1″>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="slick-1.8.1/slick/slick.min.js"></script>
   <script type="text/javascript">
@@ -38,12 +39,12 @@
   <script type="text/javascript">
     // スクロールアニメーション
     $(function () {
-      var navHeight = 75;
+      var navHeight = $('nav').outerHeight();
       $('a[href^="#"]').click(function () {
         var speed = 400;
         var href = $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top - navHeight - 109;
+        var position = target.offset().top - navHeight;
         $('body,html').animate({ scrollTop: position }, speed, 'swing');
         return false;
       });
@@ -80,8 +81,8 @@
         dots: true,
         dotsClass: 'slide-dots',
         arrows: true,
-        prevArrow: '<div class="slider-arrow slider-prev fas fa-caret-left fa-3x"></div>',
-        nextArrow: '<dev class="slider-arrow slider-next fas fa-caret-right fa-3x"></div>'
+        prevArrow: '<div class="slider-arrow slider-prev fas fa-caret-left left-arr"></div>',
+        nextArrow: '<dev class="slider-arrow slider-next fas fa-caret-right right-arr"></div>'
       }); 
     });
   </script>
@@ -99,15 +100,10 @@
         </li>
       </ul>
     </div>
-    <div class="title">筑波大学花火研究会</div>
+    <div class="title">筑波大学<br class="ifsmartphone">花火研究会</div>
     <nav class>
       <a href="#" class="totop">筑波大学花火研究会</a>
       <ul>
-        <li>
-          <a href="http://hanabi-tsukuba.hatenablog.jp/" target="_blank">
-            ブログ
-          </a>
-        </li>
         <li>
           <a href="#about">
             団体紹介
@@ -128,19 +124,22 @@
   </header>
 
   <main>
-    <section class="about">
-      <h1 id="about">団体紹介</h1>
+    <section class="about" id="about">
+      <h1>団体紹介</h1>
       <p>
         花火観覧およびやどかり祭や<br>
         雙峰祭花火企画のお手伝いを<br>
         目的としている筑波大学公認サークルです。<br>
-        毎週金曜日に図書館でミーティングをしています。
+        普段は毎週ミーティングをしています。
       </p>
     </section>
 
-    <section class="fireworks-info">
+    <div class="border">
       <img src="img/fireworks1.png" class="fire" id="fire1">
-      <h1 id="fireworks-info">花火情報</h1>
+    </div>
+
+    <section class="fireworks-info" id="fireworks-info">
+      <h1>花火情報</h1>
       <p>
         弊会員イチオシの花火大会を紹介します。<br>
         ぜひ、実際に足を運んでみてください。
@@ -162,43 +161,49 @@
             <div class="slide-overlay">
               <a href="http://www.nagano-cci.or.jp/ebisukou/" target="_blank">長野えびす講</a>
               <p>音楽と花火が共演するミュージックスターマインは迫力満点！<br>
-                フィナーレは感動もの。<br>
+                フィナーレは特に感動ものです。<br>
                 毎年勤労感謝の日に行われるので、防寒対策はしっかりとしていきましょう。</p>
             </div>
           </div>
         </li>
         <li>
           <div class="slide">
-            <img src="" alt="">
+            <img src="img/joso.jpg" alt="常総きぬ川花火大会">
               <div class="slide-overlay">
-                <a href=""></a>
-                <p></p>
+                <a href="https://joso-hanabi.jp/" target="_blank">常総きぬ川花火大会</a>
+                <p>魅力度ランキングは全国最下位を誇る茨城県ですが、花火は違います。<br>
+                   常総の花火では、日本でも指折りの花火師による、<br>
+                   極めて芸術性の高い花火を見ることができます。</p>
               </div>
           </div>
         </li>
       </ul>
-      <img src="img/fireworks2.png" class="fire" id="fire2">
     </section>
 
-    <section class="contact">
-      <h1 id="contact">お問い合わせ</h1>
+    <div class="border">
+      <img src="img/fireworks2.png" class="fire" id="fire2">
+    </div>
+
+    <section class="contact" id="contact">
+      <h1>お問い合わせ</h1>
       <p>何かご不明な点等ございましたら<br>
-        メールまたはTwitterにてご連絡ください。</p>
+        メールまたはTwitterにてご連絡ください。
+      </p>
       <table class="address_tb">
         <tr>
-        <td class="address">
-        <a href="mailto:tsukuba.hanabi@gmail.com">
-          <p class="far fa-envelope fa-5x faa-bounce animated-hover"></p>
-        </a>
-        <p>tsukuba.hanabi <img src="img/at.png" id="atmark"> gmail.com</p>
-      </td>
-      <td class="address">
-        <a href="https://twitter.com/hanabitsukuba" target="_blank">
-          <p class="fab fa-twitter fa-5x faa-wrench animated-hover"></p>
-          <p>@HanabiTsukuba</p>
-        </a>
-      </td>
-      </tr>
+          <td class="address">
+            <a href="mailto:tsukuba.hanabi@gmail.com">
+              <p class="far fa-envelope fa-5x faa-bounce animated-hover"></p>
+            </a>
+            <p>tsukuba.hanabi <img src="img/at.png" id="atmark"> gmail.com</p>
+          </td>
+          <td class="address">
+            <a href="https://twitter.com/hanabitsukuba" target="_blank">
+              <p class="fab fa-twitter fa-5x faa-wrench animated-hover"></p>
+              <p>@HanabiTsukuba</p>
+            </a>
+          </td>
+        </tr>
       </table>
     </section>
   </main>
