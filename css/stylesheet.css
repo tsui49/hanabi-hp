@@ -239,7 +239,7 @@ section h1 {
 
 .slide-overlay a,
 .slide-overlay p {
-    padding-top: 100px;
+    padding-top: 80px;
     color: #fff;
     text-align: center;
     -webkit-transform: scale3d(0, 0, 1);
@@ -523,13 +523,16 @@ footer p {
         width: 80vw;
     }
 
+    .slide-overlay {
+        padding-top: 3vh;
+    }
+
     .slide-overlay a {
         font-size: 32px;
     }
 
     .slide-overlay p {
         font-size: 24px;
-        margin-top: 2vh;
     }
 
     .left-arr,
