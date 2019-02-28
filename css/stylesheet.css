@@ -128,18 +128,9 @@ a:hover {
     margin: 0 auto;
 }
 
-#fire1 {
-    margin-top: 0;
-}
-
-#fire2 {
-    margin-bottom: 0;
-}
-
 .about, 
 .fireworks-info,
 .contact {
-    width: auto;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -172,11 +163,12 @@ section h1 {
 .fireworks-info {
     color: #fff;
     background: #000;
+    padding-bottom: 100px;
 }
 
 .fireworks-info ol,
 .fireworks-info ul{
-    list-style:none;
+    list-style: none;
 }
 
 
@@ -309,10 +301,6 @@ ul.slider {
 
 /* dots */
 
-.slide-dotted.slick-slider {
-    margin-bottom: 100px;
-}
-
 .slide-dots {
     position: absolute;
     bottom: -25px;
@@ -384,7 +372,6 @@ ul.slider {
 /* contact */
 
 .address_tb {
-    padding-top: 50px;
     margin: 0 auto;
 }
 
@@ -395,12 +382,10 @@ ul.slider {
 
 .fa-envelope {
     color: orangered;
-    margin-bottom: 20px;
 }
 
 .fa-twitter {
     color: deepskyblue;
-    margin-bottom: 20px;
 }
 
 #atmark {
@@ -449,7 +434,7 @@ footer p {
 
     .title,
     .title-eng {
-        font-size: 96px;
+        font-size: 4rem;
         padding: 30vh 0px;
     }
 
@@ -466,18 +451,26 @@ footer p {
         line-height: 10vh;
     }
 
-    nav li,
     .lang li {
-        padding: 0 40px;
-        font-size: 28px;
+        padding: 0 0.5rem;
+        font-size: 0.5rem;
+        font-weight: bolder;
+    }
+
+    nav li {
+        padding: 0 0.3rem;
+        font-size: 0.8rem;
         font-weight: bolder;
     }
 
     .is-fixed a {
-        font-size: 28px;
+        font-size: 0.8rem;
         font-weight: bolder;
     }
 
+    .totop {
+        padding-left: 10px;
+    }
 
 /* main */
 
@@ -487,13 +480,13 @@ footer p {
     }
 
     .about {
-        height: 60vh;
+        height: 60vh;   /* ここを失くすとフォントサイズが一緒になる */
     }
 
     .about > h1,
     .fireworks-info > h1,
     .contact > h1 {
-        font-size: 80px;
+        font-size: 2rem;
         margin-top: 15vh;
         margin-bottom: 10vh;
     }
@@ -501,7 +494,7 @@ footer p {
     .about > p,
     .fireworks-info > p,
     .contact > p {
-        font-size: 32px;
+        font-size: 1rem;
         margin-bottom: 15vh;
     }
 
@@ -527,24 +520,30 @@ footer p {
         padding-top: 3vh;
     }
 
+    .slide-overlay a,
+    .slide-overlay p {
+        padding-top: 3vh;
+    }
+
     .slide-overlay a {
-        font-size: 32px;
+        font-size: 1.2rem;
     }
 
     .slide-overlay p {
-        font-size: 24px;
+        font-size: 0.7rem;
     }
 
     .left-arr,
     .right-arr {
-        font-size: 80px;
+        font-size: 3rem;
     }
 
-
-/* dots */
-
-    .slide-dotted.slick-slider {
-        margin-bottom: 15vh;
+    .slider-prev {
+        left: -30px;
+    }
+    
+    .slider-next {
+        right: -30px;
     }
 
 
@@ -558,17 +557,17 @@ footer p {
 
     .address p,
     .address a {
-        font-size: 32px;
+        font-size: 1rem;
     }
 
     #atmark {
-        height: 24px;
-        width: 24px;
+        height: 0.7rem;
+        width: 0.7rem;
     }
 
     .fa-envelope::before,
     .fa-twitter::before {
-        font-size: 192px;
+        font-size: 7rem;
     }
 
 
@@ -579,7 +578,7 @@ footer p {
     }
 
     footer p {
-        font-size: 28px;
+        font-size: 0.7rem;
         padding-top: 8vh;
     }
 
