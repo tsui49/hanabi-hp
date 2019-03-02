@@ -186,16 +186,17 @@ section h1 {
 }
 
 .slide {
-    width: 60vw;
+    width: 59vw;
     background: #000;
     position: relative;
+    border: #aaa solid 1px;
     border-radius: 5%;
     overflow: hidden;
 }
 
 .slide img {
     display: block;
-    width: 60vw;
+    width: 59vw;
     height: auto;
     border-radius: 5%;
     opacity: 1;
@@ -469,7 +470,8 @@ footer p {
     }
 
     .totop {
-        padding-left: 10px;
+        /* padding-left: 10px; */
+        display: none;
     }
 
 /* main */
@@ -480,7 +482,7 @@ footer p {
     }
 
     .about {
-        height: 60vh;   /* ここを失くすとフォントサイズが一緒になる */
+        height: 60vh;
     }
 
     .about > h1,
@@ -510,10 +512,14 @@ footer p {
 
 /* slider */
 
-    .slider,
+    .slider {
+        width: 80vw;
+    }
+
     .slide,
     .slide img {
-        width: 80vw;
+        width: 79vw;
+        border: #aaa solid 1px;
     }
 
     .slide-overlay {
@@ -567,7 +573,7 @@ footer p {
 
     .fa-envelope::before,
     .fa-twitter::before {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
 
