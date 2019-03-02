@@ -454,7 +454,7 @@ footer p {
 
     .lang li {
         padding: 0 0.5rem;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
         font-weight: bolder;
     }
 
@@ -513,13 +513,16 @@ footer p {
 /* slider */
 
     .slider {
-        width: 80vw;
+        width: 90vw;
+    }
+
+    .slide {
+        border: #aaa solid 1px;
     }
 
     .slide,
     .slide img {
-        width: 79vw;
-        border: #aaa solid 1px;
+        width: 89vw;
     }
 
     .slide-overlay {
@@ -539,9 +542,8 @@ footer p {
         font-size: 0.7rem;
     }
 
-    .left-arr,
-    .right-arr {
-        font-size: 3rem;
+    .slider-arrow::before {
+        display: none;
     }
 
     .slider-prev {
