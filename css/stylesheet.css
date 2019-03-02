@@ -443,6 +443,11 @@ footer p {
         display: initial;
     }
 
+    .lang ul,
+    .totop{
+        padding-left: 0.5rem;
+    }
+
     nav {
         height: 10vh;
     }
