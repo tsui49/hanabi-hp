@@ -89,8 +89,8 @@
   <script type="text/javascript">
   // スマホならホバーなしでアイコンが動く
     $(document).ready(function(){
-      var env = $('fa-envelope');
-      var twi = $('fa-twitter');
+      var env = $('#env');
+      var twi = $('#twi');
       if ($(window).width() < 1024) {
         env.removeClass(animated-hover);
         env.addClass(animated);
@@ -214,13 +214,13 @@
         <tr>
           <td class="address">
             <a href="mailto:tsukuba.hanabi@gmail.com">
-              <p class="far fa-envelope fa-5x faa-bounce animated-hover"></p>
+              <p class="far fa-envelope fa-5x faa-bounce animated-hover" id="env"></p>
             </a>
             <p>tsukuba.hanabi <img src="../img/at.png" id="atmark"> gmail.com</p>
           </td>
           <td class="address">
             <a href="https://twitter.com/hanabitsukuba" target="_blank">
-              <p class="fab fa-twitter fa-5x faa-wrench animated-hover"></p>
+              <p class="fab fa-twitter fa-5x faa-wrench animated-hover" id="twi"></p>
               <p>@HanabiTsukuba</p>
             </a>
           </td>
