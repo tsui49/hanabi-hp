@@ -86,6 +86,19 @@
       }); 
     });
   </script>
+  <script type="text/javascript">
+  // スマホならホバーなしでアイコンが動く
+    $(document).ready(function(){
+      var env = $('fa-envelope');
+      var twi = $('fa-twitter');
+      if ($(window).width() < 1024) {
+        env.removeClass(animated-hover);
+        env.addClass(animated);
+        twi.removeClass(animated-hover);
+        twi.addClass(animated);
+      }
+    });
+  </script>
 </head>
 
 <body>
