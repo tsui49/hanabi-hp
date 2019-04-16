@@ -160,8 +160,9 @@ section h1 {
     margin-right: 13rem;
 }
 
-.actions ul {
-    padding-left: 38vw;
+.actions {
+    text-align: left;
+    margin: 0 auto;
 }
 
 
