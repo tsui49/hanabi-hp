@@ -408,6 +408,16 @@ ul.slider {
     color: deepskyblue;
 }
 
+.env-float {
+    -webkit-animation: float 1s linear infinite;
+    animation: float 1s linear -0.5s infinite;
+}
+
+.twi-float {
+    -webkit-animation: float 1s linear infinite;
+    animation: float 1s linear infinite;
+}
+
 #atmark {
     height: 12px;
     width: 12px;
