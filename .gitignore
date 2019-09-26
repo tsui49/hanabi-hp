@@ -1,0 +1,15 @@
+# classファイルはいらない
+*.class
+
+# textファイルはいらない
+*.txt
+*.text
+
+# vscodeのディレクトリはいらない
+/.vscode/
+
+# google consoleのファイルはいらない
+googlee95c58bab95fe37d.html
+
+# mp4はまだ必要ない
+*.mp4
