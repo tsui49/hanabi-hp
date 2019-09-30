@@ -128,7 +128,6 @@ a:hover {
     margin: 0 auto;
 }
 
-.about, 
 .fireworks-info,
 .contact {
     margin: 0 auto;
@@ -157,37 +156,47 @@ section h1 {
 #our_actions {
     font-weight: bolder;
     position: relative;
-    margin-right: 13rem;
 }
 
 .actions {
     text-align: left;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 
 /* about */
 
 .about {
-    height: 500px;
+    position: relative;
+    background-color: #000;
+}
+
+.about h1 {
+    margin: 70px auto 80px;
+}
+
+.wrap-video {
     position: relative;
 }
 
-/* .video-wrap {
-    background-color: #eee;
-    color: #fff;
-    z-index: 2;
-} */
+.wrap-chr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 600px;
+    color: white;
+    background-color: rgba(180, 110, 110, 0.5);
+    border-radius: 2%;
+    z-index: 1;
+}
 
 video {
-    height: 200px;;
-    position: absolute;
-    left: 0;
-    top: 0;
-    min-height: 100%;
-    opacity: 0.5;
-    overflow: hidden;
+    width: 100%;
 }
+
 
 /* fireworks-info */
 
@@ -530,10 +539,6 @@ footer p {
         width: 15vw;
         height: auto;
     }
-
-    .about {
-        height: 65vh;
-    }
     
     .actions ul {
         padding-left: 22vw;
@@ -543,12 +548,24 @@ footer p {
         width: 70vw;
     }
 
+    .wrap-chr {
+        width: 100vw;
+        height: 90vh;
+        border-radius: 0;
+    }
+
+    video {
+        width: 100vw;
+        height: 90vh;
+        object-fit: cover;
+        object-position: -550px;
+    }
+
     .about > h1,
     .fireworks-info > h1,
     .contact > h1 {
         font-size: 2rem;
-        margin-top: 15vh;
-        margin-bottom: 10vh;
+        margin-top: 5vh;
     }
 
     .about > p,
@@ -564,6 +581,7 @@ footer p {
 
     .fireworks-info {
         padding-bottom: 15vh;
+        background-color: #000;
     }
 
 
