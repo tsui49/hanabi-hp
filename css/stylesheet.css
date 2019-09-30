@@ -551,6 +551,7 @@ footer p {
     .wrap-chr {
         width: 100vw;
         height: 90vh;
+        border-radius: 0;
     }
 
     video {
@@ -564,8 +565,7 @@ footer p {
     .fireworks-info > h1,
     .contact > h1 {
         font-size: 2rem;
-        margin-top: 15vh;
-        margin-bottom: 10vh;
+        margin-top: 5vh;
     }
 
     .about > p,
@@ -581,6 +581,7 @@ footer p {
 
     .fireworks-info {
         padding-bottom: 15vh;
+        background-color: #000;
     }
 
 
